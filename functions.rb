@@ -50,6 +50,7 @@ end
 def visualizar_tarefas(lista_de_tarefas)
     # Função para exibir na tela todas as tarefas salvas
 
+    limpar_tela()
     linha("Tarefas")
     listar_tarefas(lista_de_tarefas)
 end
@@ -57,7 +58,6 @@ end
 def editar_tarefas(lista_de_tarefas, numero_da_tarefa)
     # Função para editar tarefas
 
-    linha("Editar Tarefa")
     print "Digite a alteração na tarefa #{numero_da_tarefa}: "
     tarefa_editada = gets.chomp
 
@@ -67,7 +67,7 @@ def editar_tarefas(lista_de_tarefas, numero_da_tarefa)
             lista_de_tarefas.insert(numero_da_tarefa-1, "#{tarefa_editada}")
         end
     end
-
+    limpar_tela()
 end
 
 def deletar_tarefas(lista_de_tarefas, numero_da_tarefa)

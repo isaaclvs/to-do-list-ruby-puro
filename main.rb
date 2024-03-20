@@ -24,6 +24,10 @@ until resposta == 5 do
         # Visualizar tarefas
         elsif resposta == 2
             visualizar_tarefas(lista_de_tarefas)
+            puts ""
+            print "Tecle ENTER para voltar ao menu principal"
+            gets
+            limpar_tela()
 
         # Editar tarefas
         elsif resposta == 3
