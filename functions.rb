@@ -58,9 +58,11 @@ end
 def editar_tarefas(lista_de_tarefas, numero_da_tarefa)
     # Função para editar tarefas
 
+    # Perguntar e receber qual tarefa o usuário deseja editar
     print "Digite a alteração na tarefa #{numero_da_tarefa}: "
     tarefa_editada = gets.chomp
 
+    # Mecanismo de substituição dentro do array
     lista_de_tarefas.each do |tarefa|
         if lista_de_tarefas.index(tarefa) == (numero_da_tarefa - 1)
             lista_de_tarefas.delete_at(numero_da_tarefa-1)
